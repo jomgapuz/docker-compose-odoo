@@ -1,0 +1,16 @@
+[submodule "third_party_addons/github.com/OCA/web"]
+	path = third_party_addons/github.com/OCA/web
+	url = https://github.com/OCA/web.git
+	branch = 13.0
+[submodule "third_party_addons/github.com/ventor-tech/merp"]
+	path = third_party_addons/github.com/ventor-tech/merp
+	url = https://github.com/ventor-tech/merp.git
+	branch = 13.0
+[submodule "third_party_addons/github.com/OCA/connector"]
+	path = third_party_addons/github.com/OCA/connector
+	url = https://github.com/OCA/connector.git
+	branch = 13.0
+[submodule "third_party_addons/github.com/OCA/rest-framework"]
+	path = third_party_addons/github.com/OCA/rest-framework
+	url = https://github.com/OCA/rest-framework.git
+	branch = 13.0
