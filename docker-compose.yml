@@ -10,14 +10,16 @@ services:
     # Uncomment below when developing
     # tty: true
     # stdin_open: true
-    # Uncomment when developing
-    # command: "--dev=reload"
+    # command: "--dev=xml,reload"
 
     volumes:
       - ./config:/etc/odoo
-      - ./extra-addons:/mnt/extra-addons
+      - ./extra_addons:/mnt/extra_addons
+      - ./third_party_addons:/mnt/third_party_addons
   db:
     image: postgres:12
+    # ports:
+    #   - "54321:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
