@@ -102,5 +102,5 @@ ENV/
 .mypy_cache/
 
 # symlinks
-addons
-odoo
+/addons
+/odoo

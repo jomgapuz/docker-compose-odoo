@@ -1,21 +1,5 @@
 version: '2'
 services:
-  web:
-    image: odoo:13.0
-    depends_on:
-      - db
-    ports:
-      - "8069:8069"
-
-    # Uncomment below when developing
-    # tty: true
-    # stdin_open: true
-    # command: "--dev=xml,reload"
-
-    volumes:
-      - ./config:/etc/odoo
-      - ./extra_addons:/mnt/extra_addons
-      - ./third_party_addons:/mnt/third_party_addons
   db:
     image: postgres:12
     # ports:
@@ -24,3 +8,30 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+
+  app:
+    image: odoo:13.0
+    depends_on:
+      - db
+    # ports:
+    #   - "8069:8069"
+    #   - "8072:8072"
+
+    # Uncomment below when developing
+    # tty: true
+    # stdin_open: true
+    # command: "--dev=xml,reload"
+
+    volumes:
+      - ./config/odoo:/etc/odoo
+      - ./extra_addons:/mnt/extra_addons
+      - ./third_party_addons:/mnt/third_party_addons
+
+  web:
+    depends_on:
+      - app
+    image: nginx:1.19
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
