@@ -1,7 +1,7 @@
 version: '2'
 services:
   db:
-    image: postgres:12
+    image: postgres:13
     # ports:
     #   - "54321:5432"
     environment:
@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=odoo
 
   app:
-    image: odoo:13.0
+    image: odoo:14.0
     depends_on:
       - db
     # ports:
@@ -30,7 +30,7 @@ services:
   web:
     depends_on:
       - app
-    image: nginx:1.19
+    image: nginx:1.20
     ports:
       - "80:80"
     volumes:
