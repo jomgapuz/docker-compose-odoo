@@ -14,3 +14,15 @@
 	path = third_party_addons/github.com/OCA/rest-framework
 	url = https://github.com/OCA/rest-framework.git
 	branch = 13.0
+[submodule "third_party_addons/github.com/OCA/storage"]
+	path = third_party_addons/github.com/OCA/storage
+	url = https://github.com/OCA/storage.git
+	branch = 14.0
+[submodule "third_party_addons/github.com/OCA/dms"]
+	path = third_party_addons/github.com/OCA/dms
+	url = https://github.com/OCA/dms.git
+	branch = 14.0
+[submodule "third_party_addons/github.com/OCA/server-env"]
+	path = third_party_addons/github.com/OCA/server-env
+	url = https://github.com/OCA/server-env.git
+	branch = 14.0

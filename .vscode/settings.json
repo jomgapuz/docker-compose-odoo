@@ -2,5 +2,6 @@
   "editor.tabSize": 4,
   "python.linting.pylintArgs": [
     "--load-plugins=pylint_odoo"
-  ]
+  ],
+  "python.languageServer": "Jedi"
 }
